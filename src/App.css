@@ -1,10 +1,10 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  /* text-align: center; */
 }
-
+/* 
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -41,6 +41,11 @@
   color: #888;
 } */
 
+body {
+	background: linear-gradient(135deg, #0f172a, #1e293b);
+	min-height: 100vh;
+  }  
+
 @import "@radix-ui/colors/black-alpha.css";
 @import "@radix-ui/colors/indigo.css";
 @import "@radix-ui/colors/mauve.css";
@@ -57,14 +62,14 @@ p {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	width: 100vw;
+	/* width: 100vw; */
 	z-index: 1;
 }
 
 .NavigationMenuList {
 	display: flex;
 	justify-content: center;
-	background-color: white;
+	background-color: translucent;
 	padding: 4px;
 	border-radius: 6px;
 	list-style: none;
@@ -374,3 +379,153 @@ p {
 		opacity: 0;
 	}
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.NavigationMenuList {
+	  flex-direction: column;
+	  gap: 8px;
+	  padding: 8px;
+	}
+  
+	.NavigationMenuLink .Button {
+	  width: 100%;
+	  justify-content: center;
+	}
+  
+	.HeroSection h1 {
+	  font-size: 2.5rem;
+	  line-height: 1.2;
+	}
+  
+	.PartnerCard {
+	  flex: 1 1 100%;
+	  margin-bottom: 1rem;
+	}
+  
+	.NavigationMenuRoot {
+	  padding: 0 1rem;
+	}
+  
+	.List.one,
+	.List.two {
+	  grid-template-columns: 1fr !important;
+	}
+  
+	.Callout {
+	  padding: 1.5rem;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	body {
+	  background: linear-gradient(135deg, #0f172a, #1e293b);
+	}
+  
+	.NavigationMenuList {
+	  gap: 4px;
+	}
+  
+	.HeroSection h1 {
+	  font-size: 2rem;
+	}
+  
+	.HeroSection p {
+	  font-size: 1rem;
+	}
+  
+	.Button {
+	  font-size: 0.875rem;
+	  padding: 0.5rem 1rem;
+	}
+  
+	.PartnerCard {
+	  padding: 1rem;
+	}
+  
+	.ContactSection .Flex {
+	  flex-direction: column;
+	  gap: 1rem;
+	}
+  
+	.NavigationMenuTrigger,
+	.NavigationMenuLink {
+	  font-size: 0.875rem;
+	  padding: 6px 8px;
+	}
+  }
+  
+  /* Mobile Menu Toggle (Add this if you want hamburger menu) */
+  @media (max-width: 768px) {
+	.DesktopMenu {
+	  display: none;
+	}
+  
+	.MobileMenuButton {
+	  display: block !important;
+	}
+  
+	.NavigationMenuList[data-mobile] {
+	  display: flex;
+	  flex-direction: column;
+	  position: absolute;
+	  top: 100%;
+	  right: 0;
+	  background: var(--color-panel-solid);
+	  width: 100%;
+	  padding: 1rem;
+	  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+	}
+  }
+
+  .container{
+	padding: 5%;
+  }
+
+  .section{
+	padding: 0% 3%;
+  }
+
+.MobileMenu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	list-style: none;
+	justify-content: end;
+  }
+
+  .MobileMenu .NavigationMenuItem {
+	margin-bottom: 0.5rem;
+  }
+  
+  .MobileMenu .NavigationMenuLink {
+	display: block;
+	width: 100%;
+	text-align: right;
+	float: right;
+  }
+  
+  .MobileMenu .NavigationMenuLink .Button {
+	width: 100%;
+	justify-content: flex-end;
+  }
+  
+  @media (max-width: 768px) {
+	.MobileMenu {
+	  display: flex;
+	  flex-direction: column;
+	}
+  
+	.MobileMenu[data-state="open"] {
+	  animation: slideDown 0.3s ease-out forwards;
+	}
+  
+	.MobileMenu[data-state="closed"] {
+	  animation: slideUp 0.3s ease-in forwards;
+	}
+  }
+
+  
