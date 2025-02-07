@@ -58,7 +58,7 @@ const Navigation = () => {
   return (
   <NavigationMenu className="NavigationMenuRoot">
     <Box px={{ initial: '3', md: '5' }} py="3">
-      <Flex direction="row">
+      <Flex direction="row" align="center" justify="between">
 
       {/* <NavigationMenuLink className='NavigationMenuLink' href="/"> */}
         <Heading size={{ initial: '5', md: '6' }}>Material Innovators</Heading>
