@@ -60,9 +60,9 @@ const Navigation = () => {
     <Box px={{ initial: '3', md: '5' }} py="3">
       <Flex direction="row">
 
-      <NavigationMenuLink className='NavigationMenuLink' href="/">
+      {/* <NavigationMenuLink className='NavigationMenuLink' href="/"> */}
         <Heading size={{ initial: '5', md: '6' }}>Material Innovators</Heading>
-      </NavigationMenuLink>
+      {/* </NavigationMenuLink> */}
       <Flex justify="between" align="center" gap="5" direction="row">
 
         {/* Desktop Menu */}
